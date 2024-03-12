@@ -21,4 +21,4 @@ jobs:
         username: ${{secrets.SSH_USERNAME}}
 
     - name: Clone repository to server
-      run: ssh ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} 'git clone https://github.com/unseffo/cicd-test.git /home/nosleepcoders/htdocs'
+      run: ssh ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} 'git clone https://github.com/unseffo/cicd-test.git'
