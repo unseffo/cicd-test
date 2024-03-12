@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main  # змініть це на назву вашої основної гілки
+      - main
 
 jobs:
   deploy:
@@ -17,6 +17,11 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_KEY }}
+
+    - name: Add SSH host key
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
     - name: Deploy code
       run: |
