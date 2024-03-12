@@ -20,4 +20,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          rsync -avz --delete $GITHUB_WORKSPACE/ username@host:/home/nosleepcoders/
+          rsync -avz --delete $GITHUB_WORKSPACE/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/nosleepcoders/htdocs
+
