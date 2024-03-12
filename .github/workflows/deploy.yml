@@ -3,21 +3,21 @@ name: Deploy
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup SSH and deploy
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-        run: ssh ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} 'git clone https://github.com/unseffo/cicd-test.git /home/nosleepcoders/htdocs'
+      - name: Setup SSH and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'git clone https://github.com/unseffo/cicd-test.git /home/nosleepcoders/htdocs'
