@@ -16,8 +16,9 @@ jobs:
     - name: Install SSH key
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.SSH_KEY }}
+        host: ${{secrets.SSH_HOST}}
+        key: ${{secrets.SSH_KEY}}
+        username: ${{secrets.SSH_USERNAME}}
 
-    - name: Deploy code
-      run: |
-        scp -r * ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/nosleepcoders
+        script: |
+        git clone https://github.com/unseffo/cicd-test.git
