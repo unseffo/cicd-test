@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy code
       run: |
-        scp -r * ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/pavlo/htdocs
+        scp -r * ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/nosleepcoders/htdocs
