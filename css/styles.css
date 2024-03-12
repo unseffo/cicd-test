@@ -1,0 +1,143 @@
+/* Стилі для елементу <html> (фон сайту) */
+html {
+    background-color: black; /* Чорний фон сайту */
+}
+
+/* Стилі для <body> */
+body {
+    background-color: black; /* Чорний фон вмісту сайту */
+    margin: 0; /* Встановлюємо нульовий відступ, щоб вміст розпочинався зверху */
+    padding: 0; /* Встановлюємо нульовий внутрішній відступ */
+}
+
+/* Стилі для header */
+header {
+    background-color: black; /* Чорний фон */
+    color: white; /* Білий текст */
+}
+
+/* Стилі для h1 */
+h1 {
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-family: "Enigmatic Unicode", sans-serif; /* Замініть "Ваш_шрифт" на назву шрифту, який ви хочете використовувати */
+    font-size: 16px;
+}
+
+/* Стилі для h2 */
+h2 {
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-family: "Enigmatic Unicode", sans-serif; /* Замініть "Ваш_шрифт" на назву шрифту, який ви хочете використовувати */
+    font-size: 28px;
+    color: white;
+}
+
+/* Стилі для зображення в хедері */
+.centered-image {
+    display: block; /* Робимо зображення блоковим елементом */
+    margin: 0 auto; /* Вирівнюємо зображення по центру горизонталі */
+    max-width: 3%; /* Максимальна ширина, щоб не розтягувати зображення */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+}
+
+nav {
+    text-align: center; /* Центрування тексту всередині nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Використовуємо флексбокс для центрування li елементів */
+    justify-content: center; /* Центрування по горизонталі */
+}
+
+nav li {
+    color: #fff;
+    margin-right: 40px;
+}
+
+nav li:last-child {
+    margin-right: 0; /* Відступ для останнього li елемента навігації не потрібно */
+}
+
+nav li a {
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.left-column {
+    width: 60%; /* Встановіть ширину для лівої колонки */
+}
+
+.right-column {
+    width: 30%; /* Встановіть ширину для правої колонки */
+}
+
+p {
+    color: white; 
+}
+
+footer {
+    font-family: "Arial", sans-serif;
+    text-align: center; /* Вирівнювання тексту внутрішніх елементів по центру */
+    background-color: #000; /* Колір фону футера */
+    color: #fff; /* Колір тексту */
+    padding: 20px; /* Попередні і внутрішні відступи для футера */
+    width: 100%; /* Ширина футера на всю ширину сторінки */
+}
+
+section {
+    color: white;
+    font-size: 16px;
+}
+
+th, td {
+    border: 1px solid white; 
+}
+
+#callback {
+    background-color: #000; /* Чорний фон */
+    padding: 20px;
+    border: none;
+    text-align: center; /* Вирівнювання тексту та блоків по центру */
+    color: #fff; /* Білий текст */
+}
+
+#callback h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Білий текст */
+}
+
+#callback label {
+    display: block;
+    font-weight: bold;
+    color: #fff; /* Білий текст */
+}
+
+#callback input[type="text"],
+#callback input[type="email"],
+#callback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #fff; /* Біла обводка */
+    border-radius: 5px;
+    width: 80%; /* Вирівнювання по центру по горизонталі */
+    margin: 0 auto; /* Вирівнювання по центру по горизонталі */
+    color: #000; /* Чорний текст */
+}
+
+
