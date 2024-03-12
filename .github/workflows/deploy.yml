@@ -22,5 +22,5 @@ jobs:
         script: |
           mkdir htdocs
           cd htdocs
-          git clone https://github.com/unseffo/cicd-test.git /home/nosleepcoders/htdocs
+          git clone https://github.com/unseffo/cicd-test.git .
           echo "Deployment success!"
