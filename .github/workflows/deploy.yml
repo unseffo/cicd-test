@@ -13,11 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Decrypt SSH key
-      run: echo "${{ secrets.SSH_KEY }}" | base64 -d > ~/.ssh/id_rsa
-
-    - name: Set permissions for SSH key
-      run: chmod 600 ~/.ssh/id_rsa
+    - name: Install SSH key
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_KEY }}
 
     - name: Deploy code
       run: |
